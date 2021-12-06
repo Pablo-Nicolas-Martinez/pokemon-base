@@ -16,14 +16,20 @@ class stats {
     public:
         // Access functions
         inline int getHp() { return values[0]; };
+        inline int getAtt() { return values[1]; };
+        inline int getDef() { return values[2]; };
+        inline int getSpAtt() { return values[3]; };
+        inline int getSpDef() { return values[4]; };
+        inline int getSpe() { return values[5]; };
         
         // Empty default constructor
         stats() {}
 
         // Constructor from values
-        stats(std::array<int, 6> Nvalues) {
-            values = Nvalues;
-        }
+        stats(std::array<int, 6> Nvalues) { values = Nvalues; }
+
+        inline int assignHp(int newHp) { values[0] = newHP; };
+        // Add operator for basic arithmetic operations
 };
 
 #endif 
